@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Build:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Build_jar</output-path>
+    <root id="archive" name="Build.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="2D-Engine-Greenfoot" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/rccookie/json/4.3.4/json-4.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/rccookie/util/1.10.2.0/util-1.10.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.11.0/jna-platform-5.11.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.11.0/jna-5.11.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
