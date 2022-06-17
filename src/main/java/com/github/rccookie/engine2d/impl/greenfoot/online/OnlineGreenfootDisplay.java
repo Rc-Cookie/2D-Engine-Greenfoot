@@ -1,7 +1,7 @@
 package com.github.rccookie.engine2d.impl.greenfoot.online;
 
 import com.github.rccookie.engine2d.Application;
-import com.github.rccookie.engine2d.Execute;
+import com.github.rccookie.engine2d.coroutine.Execute;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootDisplay;
 import com.github.rccookie.engine2d.util.greenfoot.JS;
 import com.github.rccookie.geometry.performance.int2;

@@ -6,8 +6,6 @@ import com.github.rccookie.engine2d.impl.ImageManager;
 import com.github.rccookie.engine2d.impl.InputAdapter;
 import com.github.rccookie.engine2d.impl.OnlineManager;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootImplementation;
-import com.github.rccookie.engine2d.util.Coroutine;
-import com.github.rccookie.util.Future;
 
 /**
  * Online based greenfoot.Greenfoot Engine2D implementation.
@@ -68,24 +66,6 @@ public class OnlineGreenfootImplementation extends GreenfootImplementation {
         long targetTime = System.nanoTime() + (millis * 1000000) + nanos;
         //noinspection StatementWithEmptyBody
         while(System.nanoTime() < targetTime);
-    }
-
-    @Override
-    @Deprecated
-    public void yield() {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    @Deprecated
-    public <T> Future<T> startCoroutine(Coroutine<T> coroutine) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
-    @Deprecated
-    public void sleepUntilNextFrame() {
-        throw new UnsupportedOperationException();
     }
 
     @Override

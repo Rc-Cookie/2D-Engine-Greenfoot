@@ -1,6 +1,6 @@
 package com.github.rccookie.engine2d.impl.greenfoot.offline;
 
-import com.github.rccookie.engine2d.Execute;
+import com.github.rccookie.engine2d.coroutine.Execute;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootDisplay;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootInputAdapter;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootSession;

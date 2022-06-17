@@ -1,6 +1,5 @@
 package com.github.rccookie.engine2d.impl.greenfoot.offline;
 
-import com.github.rccookie.engine2d.Execute;
 import com.github.rccookie.engine2d.impl.Display;
 import com.github.rccookie.engine2d.impl.IOManager;
 import com.github.rccookie.engine2d.impl.ImageManager;
@@ -9,10 +8,6 @@ import com.github.rccookie.engine2d.impl.OnlineManager;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootDisplay;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootImplementation;
 import com.github.rccookie.engine2d.impl.greenfoot.Sensitive;
-import com.github.rccookie.engine2d.util.Coroutine;
-import com.github.rccookie.util.Future;
-import com.github.rccookie.util.FutureImpl;
-import com.github.rccookie.util.ThreadedFutureImpl;
 
 /**
  * Offline optimized greenfoot.Greenfoot based Engine2D implementation.
@@ -74,35 +69,6 @@ public class OfflineGreenfootImplementation extends GreenfootImplementation {
     public void sleep(long millis, int nanos) {
         try { Thread.sleep(millis, nanos); }
         catch(InterruptedException ignored) { }
-    }
-
-    @Override
-    public void yield() {
-        Thread.yield();
-    }
-
-    @Override
-    @Deprecated
-    public <T> Future<T> startCoroutine(Coroutine<T> coroutine) {
-        FutureImpl<T> future = new ThreadedFutureImpl<>();
-        new Thread(() -> {
-            try {
-                T result = coroutine.run();
-                future.complete(result);
-            } catch(RuntimeException e) {
-                future.fail(e);
-                throw e;
-            }
-        }).start();
-        return future;
-    }
-
-    @Override
-    public void sleepUntilNextFrame() {
-        Thread thread = Thread.currentThread();
-        Execute.nextFrame(thread::interrupt);
-        try { thread.join(); }
-        catch (InterruptedException ignored) { }
     }
 
     @Override

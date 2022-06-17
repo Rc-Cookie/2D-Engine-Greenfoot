@@ -4,7 +4,6 @@ import com.github.rccookie.engine2d.impl.StartupPrefs;
 import com.github.rccookie.engine2d.impl.greenfoot.GreenfootSession;
 import com.github.rccookie.engine2d.impl.greenfoot.online.CommentManager;
 import com.github.rccookie.geometry.performance.int2;
-import com.github.rccookie.util.Cloneable;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -12,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Startup preferences for the greenfoot application loader.
  */
-public class GreenfootStartupPrefs implements StartupPrefs<GreenfootStartupPrefs>, Cloneable<GreenfootStartupPrefs> {
+public class GreenfootStartupPrefs implements StartupPrefs<GreenfootStartupPrefs> {
 
     /**
      * The startup world size, does not affect the actual resolution
